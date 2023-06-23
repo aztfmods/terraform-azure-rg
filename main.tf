@@ -1,4 +1,7 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-${var.workload}-${var.environment}-${var.location_short}"
-  location = var.location
+  for_each = local.all_groups
+
+  name     = "rg-${var.workload}-${var.environment}${each.key != "default" ? "-${each.key}" : ""}${var.suffix != "" ? "-${var.suffix}" : ""}"
+  location = each.value.region
 }
+

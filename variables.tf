@@ -1,4 +1,17 @@
 variable "workload" {}
 variable "environment" {}
-variable "location" {}
-variable "location_short" {}
+
+variable "region" {
+  type    = string
+  default = null
+}
+
+variable "suffix" {
+  type    = string
+  default = ""
+}
+
+variable "groups" {
+  default = {}
+}
+
