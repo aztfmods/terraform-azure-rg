@@ -7,14 +7,19 @@ module "rg" {
 
   workload    = var.workload
   environment = var.environment
-  #region      = "eastus"
+  suffix      = "001" # if you need it
 
-  groups = {
-    netw = {
-      region = "westeurope"
-    }
-    shd = {
-      region = "westeurope"
-    }
-  }
+  region = "eastus"
 }
+
+#module "rgs" {
+#  source = "../"
+#
+#  workload    = var.workload
+#  environment = var.environment
+
+#  groups = {
+#    network = { region = "westeurope" }
+#    shared  = { region = "westeurope" }
+#  }
+#}
