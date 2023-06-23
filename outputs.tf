@@ -1,5 +1,5 @@
 output "group" {
-  value = azurerm_resource_group.rg
+  value = azurerm_resource_group.rg[0].name
 }
 
 output "groups" {
