@@ -2,24 +2,12 @@ provider "azurerm" {
   features {}
 }
 
-module "rg" {
+module "groups" {
   source = "../"
 
-  workload    = var.workload
   environment = var.environment
-  suffix      = "001" # if you need it
 
-  region = "eastus"
+  groups = {
+    assetg = { region = "eastus" }
+  }
 }
-
-#module "rgs" {
-#  source = "../"
-#
-#  workload    = var.workload
-#  environment = var.environment
-
-#  groups = {
-#    network = { region = "westeurope" }
-#    shared  = { region = "westeurope" }
-#  }
-#}

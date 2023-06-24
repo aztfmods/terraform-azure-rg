@@ -1,4 +1,3 @@
-variable "workload" {}
 variable "environment" {}
 
 variable "region" {
