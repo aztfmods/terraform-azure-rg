@@ -15,7 +15,7 @@ A last key goal is to separate logic from configuration in the module, thereby e
 ## Features
 
 - provides support for both single and multiple resource groups, allowing flexible resource management.
-- implements optional management locks for enhanced security and control over resources.
+- implements optional management locks for enhanced security
 
 The below examples shows the usage when consuming the module:
 
