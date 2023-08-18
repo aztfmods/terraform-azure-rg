@@ -2,7 +2,7 @@
 resource "azurerm_resource_group" "groups" {
   for_each = var.groups
 
-  name     = "rg-${each.key}-${var.environment}${var.suffix != "" ? "-${var.suffix}" : ""}"
+  name     = each.value.name
   location = each.value.region
 }
 
